@@ -1,3 +1,17 @@
 {
-    let test = 'test';
-}
+    /**
+     * 
+     * Type Assertions
+     * 
+     * 
+     * 
+     */
+    function jsStrFunc(): any{
+        return 2;
+    }
+    const result = jsStrFunc();
+    
+    console.log( (result as string).length)
+    
+    const wrong: any = 5;
+    console.log((wrong as  Array<number>).push(1))};
