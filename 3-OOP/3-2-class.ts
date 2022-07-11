@@ -28,7 +28,10 @@
         }
     }
     const maker = new CoffeeMaker(32); //new 라는 것은 이클래스의 인스턴스를 만든다는 뜻
-                                        //클래스 뒤에 괄호는 생성자를 호출한다는 뜻 
+    const maker2 = new CoffeeMaker(1);  //클래스 뒤에 괄호는 생성자를 호출한다는 뜻 
+    //object 를 만들떄마다 메모리에 할당되어 낭비가 된다 
+    // 그래서 활용하는 것인 static 
 }
+
 
 
