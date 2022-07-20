@@ -7,22 +7,12 @@
     interface CoffeeMaker {
       makeCoffee(shots: number): CoffeeCup;
     }
-    class CaffeLatteMachin{
-      private static BEANS_GRAMM_PER_SHOT: number = 7; // class level
-      private coffeeBeans: number = 0; // instance (object) level
-
-      private constructor(coffeeBeans: number) {
-        this.coffeeBeans = coffeeBeans;
-      }
-
-      
-        
-    }
+ 
     class CoffeeMachine implements CoffeeMaker {
       private static BEANS_GRAMM_PER_SHOT: number = 7; // class level
       private coffeeBeans: number = 0; // instance (object) level
   
-      private constructor(coffeeBeans: number) {
+      public constructor(coffeeBeans: number) {
         this.coffeeBeans = coffeeBeans;
       }
   
@@ -67,7 +57,14 @@
         return this.extract(shots);
       }
     }
-  
+    class CaffeLatteMachine extends CoffeeMachine{
+
+    }
+    const machine = new CoffeeMachine(23);
+    const latteMachine = new CaffeLatteMachine(23);
+    const coffee = latteMachine.makeCoffee(1);
+    console.log(coffee);
+
   }
 
  
